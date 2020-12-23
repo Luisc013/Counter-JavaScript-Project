@@ -2,24 +2,24 @@ const addBtn = document.querySelector(".nextBtn")
 const minusBtn = document.querySelector(".prevBtn")
 const counterObj = document.getElementById("counter").innerHTML;
 
-var counter = parseInt(counterObj, 10);
-
 addBtn.addEventListener("click", () => {
+  var counter = parseInt(counterObj, 10);
   counter += 1
   counterObj.innerHTML = counter;
   console.log(counter)
-  negativeOrPositive()
+  negativeOrPositive(counter)
 
 })
 
 minusBtn.addEventListener("click", () => {
+  var counter = parseInt(counterObj, 10);
   counter -= 1
   document.getElementById('counter').innerHTML = counter;
   console.log(counter)
-  negativeOrPositive()
+  negativeOrPositive(counter)
 })
 
-function negativeOrPositive () {
+function negativeOrPositive (counter) {
   if(counter > 0) {
     counterObj.fontcolor("green")
   }
